@@ -1,0 +1,20 @@
+body{
+    background-image: url("images/Wanderer-1 4xUpscaled.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#enterButton{
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-style: oblique;
+    display: block;
+    margin: auto;
+    margin-top: 20%;
+    background-color: rgb(157, 211, 218);
+    border-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px #ffffff;
+    width: 100px;
+    height: 20px;'
+}
