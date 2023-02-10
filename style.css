@@ -10,11 +10,12 @@ body{
     font-style: oblique;
     display: block;
     margin: auto;
-    margin-top: 20%;
-    background-color: rgb(157, 211, 218);
+    margin-top: 30%;
+    background-color: rgba(157, 211, 218, 0);
+    /* background-color: rgba(red, green, blue, alpha); */
     border-color: antiquewhite;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px 0px #ffffff;
+    /* box-shadow: 2px 2px 5px 0px #ffffff; */
     width: 100px;
     height: 20px;'
 }
