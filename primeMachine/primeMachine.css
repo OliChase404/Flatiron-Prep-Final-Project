@@ -1,0 +1,81 @@
+body {
+    background-image: url('../images/Mountains-2-4xUpscaled.jpeg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+button {
+    position: fixed;
+    width: 10%;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: #00000057;
+    color: #ffffffbd;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+
+  #output {
+    position: absolute;
+    top: 600px;
+    left: 50px;
+    max-width: 80%;
+    height: 200px;
+    /* background-color: brown; */
+    animation: console-scroll 12s linear infinite;
+  }
+  
+  @keyframes console-scroll {
+    0% {
+        transform: translatex(0);
+    }
+    100% {
+        transform: translatex(-100%);
+    }
+  }
+
+
+
+  .prime {
+    color: rgba(255, 255, 255, 0.767);
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: #00000050;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+
+a{
+    margin: auto;
+    display: block;
+    width: 50%;
+    color: inherit;
+    text-decoration: none; 
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.466);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+footer{
+    color: rgba(255, 255, 255, 0.808);
+    position: fixed;
+    bottom: 5%; 
+    left: 50%;
+    
+}
