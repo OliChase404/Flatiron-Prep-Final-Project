@@ -1,14 +1,10 @@
 
 const button = document.querySelector("#activate");
 const output = document.querySelector("#output");
-// const outputWindow = document.getElementsByTagName("div")
 
 let isPaused = true;
 let counter = 1;
 
-// function scrollDown() {
-//     outputWindow.window.scrollBy(0, 100);
-//   }
 
 button.addEventListener("click", function() {
   isPaused = !isPaused;
@@ -20,6 +16,7 @@ button.addEventListener("click", function() {
   }
 });
 
+
 function generatePrimes() {
   if (!isPaused) {
     let isPrime = true;
@@ -28,16 +25,18 @@ function generatePrimes() {
         isPrime = false;
         break;
       }
-    }
-    if (isPrime) {
-      const prime = document.createElement("div");
-      prime.classList.add("prime");
-      prime.innerHTML = counter;
-      output.appendChild(prime);
-    }
+        }
+        if (isPrime) {
+        const prime = document.createElement("div");
+        prime.classList.add("prime");
+        prime.innerHTML = counter;
+        output.appendChild(prime);
+        
+        document.getElementById('textBox').scrollTop = 
+        prime.offsetHeight + prime.offsetTop;
+        }
     counter++;
     setTimeout(generatePrimes, 1);
-    // scrollDown()
   }
 }
 

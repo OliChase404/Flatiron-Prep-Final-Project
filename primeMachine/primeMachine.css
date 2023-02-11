@@ -25,30 +25,37 @@ button {
     transform: translate(-50%, -50%);
   }
   
+  #textBox {
+    position: relative;
+    margin-top: 6%;
+    height: 1065px;
+    overflow: hidden;
+  }
 
 
-  #output {
+#output {
     position: absolute;
-    top: 600px;
-    left: 50px;
-    max-width: 80%;
-    height: 200px;
-    /* background-color: brown; */
-    animation: console-scroll 12s linear infinite;
+    /* writing-mode: vertical-rl;
+    transform: rotate(-90deg); */
+    /* top: 10%; */
+    /* left: 50px; */
+    /* max-width: 80%; */
+    /* height: 200px; */
+    /* animation: console-scroll 500s linear infinite; */
   }
   
-  @keyframes console-scroll {
+/* @keyframes console-scroll {
     0% {
-        transform: translatex(0);
+        transform: translateY(0);
     }
     100% {
-        transform: translatex(-100%);
+        transform: translateY(-10000%);
     }
-  }
+  } */
 
 
 
-  .prime {
+.prime {
     color: rgba(255, 255, 255, 0.767);
     display: inline-block;
     margin: 5px;
