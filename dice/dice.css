@@ -1,0 +1,67 @@
+
+body {
+    background-image: url('../images/Mountains-3-4xUpscaled.jpeg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+
+form {
+    text-align: center;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  input[type="number"] {
+    font-size: 16px;
+    padding: 5px;
+    width: 70px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #results {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  
+  
+
+a{
+    margin: auto;
+    display: block;
+    width: 50%;
+    color: inherit;
+    text-decoration: none; 
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.466);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer{
+    color: rgba(255, 255, 255, 0.808);
+    position: fixed;
+    bottom: 5%; 
+    left: 50%;
+    
+}
