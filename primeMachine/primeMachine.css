@@ -9,26 +9,22 @@ body {
 }
 
 button {
-    position: fixed;
     width: 10%;
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 1vw;
+    font-size: 1.5vw;
     font-weight: bolder;
     background-color: #00000057;
     color: #ffffffbd;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 1vh;
   }
   
   #textBox {
     position: relative;
-    margin-top: 6%;
-    height: 1065px;
+    margin-top: 1vh;
+    height: 81vh;
     overflow: hidden;
   }
 
@@ -41,8 +37,8 @@ button {
 .prime {
     color: rgba(255, 255, 255, 0.767);
     display: inline-block;
-    margin: 5px;
-    padding: 5px;
+    margin: 0.4vw;
+    padding: 1vw;
     background-color: #00000050;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -50,14 +46,11 @@ button {
   
 
 a{
-    margin: auto;
-    display: block;
-    width: 50%;
     color: inherit;
     text-decoration: none; 
-    font-size: 20px;
+    font-size: 1.5vw;
     font-weight: bolder;
-    padding: 10px 20px;
+    padding: 1vw 2vh;
     background-color: rgba(0, 0, 0, 0.466);
     border: 1px solid #ccc;
     border-radius: 5px;
