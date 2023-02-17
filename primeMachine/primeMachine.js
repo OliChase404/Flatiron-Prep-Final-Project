@@ -41,3 +41,8 @@ function generatePrimes() {
 }
 
 
+// const element = document.createElement("p");
+// element.innerText = "JS IS WORKING!!!";
+// element.style.color = "red";
+// element.style.fontSize = "144pt";
+// document.body.appendChild(element);
