@@ -1,5 +1,6 @@
 
 import { update as updateSnake, draw as drawSnake, snakeSpeed } from "./snake.js";
+import {update as updateFood, draw as drawFood} from "./food.js";
 
 let lastRenderTime = 0;
 const gameWindow = document.getElementById('gameWindow')
@@ -17,9 +18,11 @@ window.requestAnimationFrame(main);
 
 function update() {
     updateSnake()
+    updateFood()
 }
 
 function draw() {
     gameWindow.innerHTML =''
     drawSnake(gameWindow)
+    drawFood(gameWindow)
 }

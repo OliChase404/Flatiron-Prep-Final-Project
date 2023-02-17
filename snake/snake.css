@@ -27,6 +27,7 @@ grid-template-columns: repeat(21, 1fr);
 .snake {
     background-color: red;
     border: .25vmin solid white;
+    border-radius: 50%;
 }
 
 .food {

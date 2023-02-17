@@ -1,7 +1,8 @@
 import { getinputdirection } from "./playerControl.js"
 
-export let snakeSpeed = 4
+export let snakeSpeed = 5
 const snakeBody = [{x: 11, y: 11}]
+let newSegments = 0
 
 export function update() {
   const inputDirection = getinputdirection()
@@ -20,4 +21,18 @@ export function draw(gameWindow) {
       snakeElement.classList.add('snake')
       gameWindow.appendChild(snakeElement)
   })
+}
+
+export function growSnake(growth) {
+  newSegments += growth
+}
+
+export function onSnake(position) {
+  return snakeBody.some(segment => {
+      return equalPositions(segment, position)
+  })
+}
+
+function equalPositions(pos1, pos2) {
+  return pos1.x === pos2.x && pos1.y === pos2.y
 }
