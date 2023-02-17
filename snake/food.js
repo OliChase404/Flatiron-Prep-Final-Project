@@ -1,19 +1,14 @@
 
+import { randomGridPosition } from "./grid.js"
 import { onSnake, growSnake } from "./snake.js"
 
-let food = {
-    x: (Math.floor(Math.random() * 21) + 1),
-    y: (Math.floor(Math.random() * 21) + 1)
-}
+let food = getRandomFoodPosition()
 const growthRate = 1
 
 export function update() {
     if (onSnake(food)){
         growSnake(growthRate)
-        food = {
-            x: (Math.floor(Math.random() * 21) + 1),
-            y: (Math.floor(Math.random() * 21) + 1)
-        }
+        food = getRandomFoodPosition()
     }
   }
   
@@ -25,3 +20,10 @@ export function draw(gameWindow) {
     gameWindow.appendChild(foodElement)
   }
 
+function getRandomFoodPosition(){
+    let newFoodPosition
+    while (newFoodPosition == null || onSnake(newFoodPosition)) {
+        randomGridPosition()
+    }
+    return newFoodPosition
+}
