@@ -24,7 +24,7 @@ export function draw(gameWindow) {
   })
 }
 
-// Adds one new segment to snake when food is eaten and increases snake speed
+// Adds one new segment to snake when food is eaten and increases snake speed.
 export function growSnake(growth) {
   newSegments += growth
   snakeSpeed = (snakeSpeed + 0.2)
