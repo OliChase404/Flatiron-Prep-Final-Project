@@ -25,6 +25,7 @@ grid-template-columns: repeat(21, 1fr);
 }
 
 #scoreBoard {
+    text-align: center;
     color: blueviolet;
     border: 1px solid rgb(0, 219, 0);
     padding: 6px;

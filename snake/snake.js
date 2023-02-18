@@ -1,6 +1,6 @@
 import { getinputdirection } from "./playerControl.js"
 
-export let snakeSpeed = 5
+export let snakeSpeed = 4
 const snakeBody = [{x: 11, y: 11}]
 let newSegments = 0
 
@@ -24,8 +24,10 @@ export function draw(gameWindow) {
   })
 }
 
+// Adds one new segment to snake when food is eaten and increases snake speed
 export function growSnake(growth) {
   newSegments += growth
+  snakeSpeed = (snakeSpeed + 0.2)
 }
 
 export function onSnake(position, {ignoreHead = false} = {}) {

@@ -1,12 +1,12 @@
 
 import { randomGridPosition } from "./grid.js"
-import { onSnake, growSnake } from "./snake.js"
+import { onSnake, growSnake, snakeSpeed} from "./snake.js"
 
 let food = getRandomFoodPosition()
 const growthRate = 1
 let score = 0
 const scoreBoard = document.getElementById('scoreBoard')
-scoreBoard.innerHTML = (`Score: ${score}`)
+scoreBoard.innerHTML = (`Score<br>${score}`)
 
 // Check if food has been eaten. If so, move food, increase and display score
 export function update() {
@@ -14,7 +14,7 @@ export function update() {
         growSnake(growthRate)
         food = getRandomFoodPosition()
         score++
-        scoreBoard.innerHTML = (`Score: ${score}`)
+        scoreBoard.innerHTML = (`Score<br>${score}`)
     }
   }
   
@@ -33,3 +33,4 @@ function getRandomFoodPosition() {
     }
     return newFoodPosition
 }
+
