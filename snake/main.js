@@ -8,7 +8,7 @@ gameOverSound.preload = 'auto'
 gameOverSound.volume = 1
 
 // Game Music
-const backingMusic = new Audio('sounds/Loop for snake 16k 32sec loop.mp3')
+const backingMusic = new Audio('sounds/Loop for snake 44k wEffects 5mins.mp3')
 backingMusic.preload = 'auto'
 backingMusic.volume = 0.3
 backingMusic.playbackRate = (snakeSpeed * snakeSpeed / 18)
@@ -23,10 +23,11 @@ const gameWindow = document.getElementById('gameWindow')
 function main(currentTime) {
     if (backingMusic.paused) {backingMusic.play()}
     if (gameOver){
+        backingMusic.pause()
         gameOverSound.play()
-        if (confirm('Game Over. Press ok to restart.')) {
-            window.location = '/snake.html'
-        }
+        // if (confirm('Game Over. Press ok to restart.')) {
+        //     window.location = '/snake.html'
+        // }
         return
     }
     //increases music speed as snakeSpeed increases
