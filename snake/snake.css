@@ -30,7 +30,7 @@ grid-template-columns: repeat(21, 1fr);
     border: 1px solid rgb(0, 219, 0);
     padding: 6px;
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 3vmin;
 }
 
 .snake {
@@ -40,14 +40,13 @@ grid-template-columns: repeat(21, 1fr);
 }
 
 .food {
-    background-color: blueviolet;
     border: .25vmin solid white;
 }
 
 a{
     color: inherit;
     text-decoration: none; 
-    font-size: 1.5vw;
+    font-size: 1.5vmin;
     font-weight: bolder;
     padding: 1vw 2vh;
     background-color: rgba(0, 0, 0, 0.466);
@@ -57,6 +56,6 @@ a{
 footer{
     position: fixed;
     color: rgba(43, 255, 0, 0.808);
-    left: 46%;
-    bottom: 5%;    
+    left: 50vw;
+    bottom: 5vh;    
 }

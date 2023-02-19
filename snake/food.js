@@ -3,6 +3,9 @@ import { randomGridPosition } from "./grid.js"
 import { getRandomColor } from "./randomColors.js"
 import { onSnake, growSnake} from "./snake.js"
 
+const eatSound = new Audio('sounds/mixkit-quick-lock-sound-2854_WYoUWz8p.wav')
+eatSound.preload = 'auto'
+
 let food = getRandomFoodPosition()
 const growthRate = 1
 let score = 0
@@ -16,6 +19,7 @@ export function update() {
         food = getRandomFoodPosition()
         score++
         scoreBoard.innerHTML = (`Score<br>${score}`)
+        eatSound.play()
     }
   }
 

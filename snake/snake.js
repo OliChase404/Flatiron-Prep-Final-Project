@@ -1,8 +1,15 @@
 import { getinputdirection } from "./playerControl.js"
 
+// Set the starting speed of the snake
 export let snakeSpeed = 4
+
+// const snakeMovementSound = new Audio('sounds/mixkit-quick-lock-sound-2854.wav')
+
+// The snakes body is an array of x/y coorinates inside the game window CSS grid
 const snakeBody = [{x: 11, y: 11}]
+
 let newSegments = 0
+
 
 export function update() {
   addSegments()
@@ -28,6 +35,10 @@ export function draw(gameWindow) {
 export function growSnake(growth) {
   newSegments += growth
   snakeSpeed = (snakeSpeed + 0.2)
+  // if (snakeBody.length > 1) {
+  // let lastNewSegment = snakeBody[(snakeBody.length - 1)]
+  // lastNewSegment.style.backgroundColor = "Blue"
+  // }
 }
 
 export function onSnake(position, {ignoreHead = false} = {}) {
@@ -37,6 +48,7 @@ export function onSnake(position, {ignoreHead = false} = {}) {
   })
 }
 
+// Returns x/y coordinates of snake head
 export function getSnakeHead() {
   return snakeBody[0]
 }
