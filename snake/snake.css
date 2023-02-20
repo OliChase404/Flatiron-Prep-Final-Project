@@ -41,10 +41,20 @@ grid-template-columns: repeat(21, 1fr);
 
 #scoreBoard {
     color: blueviolet;
-    border: 1px solid rgb(0, 219, 0);
+    /* border: 1px solid rgb(0, 219, 0); */
     padding: 6px;
     font-weight: 0;
-    font-size: 2vmin;
+    font-size: 3vmin;
+}
+
+#restart {
+    display: none;
+    cursor: pointer;
+    color: blueviolet;
+    font-weight: bolder;
+    /* border: 2px solid rgb(0, 219, 0); */
+    font-size: 4vmin;
+    margin: 2vmin;
 }
 
 .snake {

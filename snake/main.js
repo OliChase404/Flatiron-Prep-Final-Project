@@ -13,7 +13,11 @@ backingMusic.preload = 'auto'
 backingMusic.volume = 0.25
 backingMusic.playbackRate = (snakeSpeed * snakeSpeed / 18)
 
-document.getElementById('popUp')
+const popUp = document.getElementById('popUp')
+const restart = document.getElementById('restart')
+restart.addEventListener("click", function(){
+    location.reload()
+})
 
 let lastRenderTime = 0;
 let gameOver = false
@@ -29,6 +33,7 @@ function main(currentTime) {
         gameOverSound.play()
         gameWindow.style.display = "none"
         popUp.style.display = "block"
+        restart.style.display = "block"
         // if (confirm('Game Over. Press ok to restart.')) {
         //     window.location = '/snake.html'
         // }
