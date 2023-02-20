@@ -5,9 +5,9 @@ import {outsideGrid, incrementGridSize} from "./grid.js";
 import {backingMusic, gameOverSound} from "./sound.js"
 
 //Check for mobile device and redirect if nessarcary.
-if (screen.width <= 768) {
-    window.location = "snakeMobile.html";
-}
+// if (screen.width <= 768) {
+//     window.location = "snakeMobile.html";
+// }
 
 // Game Over restart screen
 const popUp = document.getElementById('popUp')
