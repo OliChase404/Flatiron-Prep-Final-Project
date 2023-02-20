@@ -9,7 +9,7 @@ import { eatSound } from "./sound.js"
 
 let food = getRandomFoodPosition()
 const growthRate = 1
-let score = 0
+export let score = 0
 const scoreBoard = document.getElementById('scoreBoard')
 scoreBoard.innerHTML = (`Score<br>${score}`)
 

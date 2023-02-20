@@ -1,7 +1,7 @@
 
-import { update as updateSnake, draw as drawSnake, snakeSpeed, getSnakeHead, snakeIntersection } from "./snake.js";
+import {update as updateSnake, draw as drawSnake, snakeSpeed, getSnakeHead, snakeIntersection} from "./snake.js";
 import {update as updateFood, draw as drawFood} from "./food.js";
-import { outsideGrid } from "./grid.js";
+import {outsideGrid, incrementGridSize} from "./grid.js";
 import {backingMusic, gameOverSound} from "./sound.js"
 
 
@@ -34,10 +34,11 @@ function main(currentTime) {
     //increases music speed as snakeSpeed increases
     backingMusic.playbackRate = (snakeSpeed / 10)
 
-    window.requestAnimationFrame(main);
+    window.requestAnimationFrame(main)
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
     if (secondsSinceLastRender < 1 / snakeSpeed) {return}
     lastRenderTime = currentTime;
+    incrementGridSize()
     update()
     draw()
 }
