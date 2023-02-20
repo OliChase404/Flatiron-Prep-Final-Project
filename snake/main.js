@@ -10,21 +10,25 @@ gameOverSound.volume = 1
 // Game Music
 const backingMusic = new Audio('sounds/Loop for snake 44k wEffects 5mins.mp3')
 backingMusic.preload = 'auto'
-backingMusic.volume = 0.3
+backingMusic.volume = 0.25
 backingMusic.playbackRate = (snakeSpeed * snakeSpeed / 18)
 
+document.getElementById('popUp')
 
 let lastRenderTime = 0;
 let gameOver = false
 const gameWindow = document.getElementById('gameWindow')
 
+window.requestAnimationFrame(main);
 
-// Main game loop, sets loop time, runs game functions, ends game loop if gameOver = true. Plays game music
+// Main game loop Sets loop time. Runs game functions. Handles gameOver events = true. Plays game music.
 function main(currentTime) {
     if (backingMusic.paused) {backingMusic.play()}
     if (gameOver){
         backingMusic.pause()
         gameOverSound.play()
+        gameWindow.style.display = "none"
+        popUp.style.display = "block"
         // if (confirm('Game Over. Press ok to restart.')) {
         //     window.location = '/snake.html'
         // }
@@ -42,8 +46,7 @@ function main(currentTime) {
 }
 
 
-
-window.requestAnimationFrame(main);
+// window.requestAnimationFrame(main);
 
 
 function update() {
