@@ -2,17 +2,10 @@
 import { update as updateSnake, draw as drawSnake, snakeSpeed, getSnakeHead, snakeIntersection } from "./snake.js";
 import {update as updateFood, draw as drawFood} from "./food.js";
 import { outsideGrid } from "./grid.js";
+import {backingMusic, gameOverSound} from "./sound.js"
 
-const gameOverSound = new Audio('sounds/mixkit-retro-arcade-game-over-470.wav')
-gameOverSound.preload = 'auto'
-gameOverSound.volume = 1
 
-// Game Music
-const backingMusic = new Audio('sounds/Loop for snake 44k wEffects 5mins.mp3')
-backingMusic.preload = 'auto'
-backingMusic.volume = 0.25
-backingMusic.playbackRate = (snakeSpeed * snakeSpeed / 18)
-
+// Game Over restart screen
 const popUp = document.getElementById('popUp')
 const restart = document.getElementById('restart')
 restart.addEventListener("click", function(){
@@ -34,9 +27,6 @@ function main(currentTime) {
         gameWindow.style.display = "none"
         popUp.style.display = "block"
         restart.style.display = "block"
-        // if (confirm('Game Over. Press ok to restart.')) {
-        //     window.location = '/snake.html'
-        // }
         return
     }
     //increases music speed as snakeSpeed increases
@@ -50,8 +40,6 @@ function main(currentTime) {
     draw()
 }
 
-
-// window.requestAnimationFrame(main);
 
 
 function update() {

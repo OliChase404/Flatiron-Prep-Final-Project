@@ -3,6 +3,8 @@ import { randomGridPosition } from "./grid.js"
 import { getRandomColor } from "./randomColors.js"
 import { onSnake, growSnake} from "./snake.js"
 
+// const snake = document.getElementsByClassName("snake")
+
 const eatSound = new Audio('sounds/mixkit-quick-lock-sound-2854_WYoUWz8p.wav')
 eatSound.preload = 'auto'
 
@@ -20,6 +22,10 @@ export function update() {
         score++
         scoreBoard.innerHTML = (`Score<br>${score}`)
         eatSound.play()
+
+        // for (let i = 1; i < snake.length; i++) {
+        //   snake[i].style.backgroundColor = "white";
+        // }
     }
   }
 
