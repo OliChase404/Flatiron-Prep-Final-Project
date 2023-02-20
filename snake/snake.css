@@ -40,21 +40,26 @@ grid-template-columns: repeat(21, 1fr);
 
 #scoreBoard {
     color: blueviolet;
-    /* border: 1px solid rgb(0, 219, 0); */
-    padding: 6px;
     font-weight: 0;
     font-size: 3vmin;
 }
 
 #soundControl {
     color: blueviolet;
-    display: block;
-
+    margin: 3vmin;
+    display: flex;
+    flex-direction: column;
 }
 
 #muteMusic {
-    font-size: larger;
-    margin-bottom: 1vh;
+    cursor: pointer;
+    margin-bottom: 3vh;
+    width: 3vmin;
+}
+
+#muteEffects{
+    cursor: pointer;
+    width: 4vmin;
 }
 
 #restart {

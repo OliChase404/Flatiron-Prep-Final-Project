@@ -2,11 +2,10 @@
 import { randomGridPosition } from "./grid.js"
 import { getRandomColor } from "./randomColors.js"
 import { onSnake, growSnake} from "./snake.js"
+import { eatSound } from "./sound.js"
 
 // const snake = document.getElementsByClassName("snake")
 
-const eatSound = new Audio('sounds/mixkit-quick-lock-sound-2854_WYoUWz8p.wav')
-eatSound.preload = 'auto'
 
 let food = getRandomFoodPosition()
 const growthRate = 1

@@ -8,6 +8,7 @@ import {backingMusic, gameOverSound} from "./sound.js"
 // Game Over restart screen
 const popUp = document.getElementById('popUp')
 const restart = document.getElementById('restart')
+const soundControl = document.getElementById('soundControl')
 restart.addEventListener("click", function(){
     location.reload()
 })
@@ -25,6 +26,7 @@ function main(currentTime) {
         backingMusic.pause()
         gameOverSound.play()
         gameWindow.style.display = "none"
+        soundControl.style.display = "none"
         popUp.style.display = "block"
         restart.style.display = "block"
         return
