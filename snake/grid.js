@@ -19,17 +19,22 @@ export function outsideGrid(position){
 
 // Increcreases the grid size at set scores
 export function incrementGridSize() {
-    if (score <= 30) {
-        gridSize = 21
-    }
-    if (score > 30 && score <= 60) {
-        gridSize = 31
-    }
-    if (score > 60 && score <= 100) {
-        gridSize = 41
-    }
-    if (score > 100) {
-        gridSize = 61
+    switch(score) {
+        case 20:
+            gridSize = 31
+            break
+        case 40:
+            gridSize = 41
+            break
+        case 60:
+            gridSize = 51
+            break
+        case 80:
+            gridSize = 61
+            break
+        case 100:
+            gridSize = 101
+            break
     }
         gameWindow.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
         gameWindow.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`

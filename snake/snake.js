@@ -34,7 +34,7 @@ export function draw(gameWindow) {
 // Adds one new segment to snake when food is eaten and increases snake speed.
 export function growSnake(growth) {
   newSegments += growth
-  snakeSpeed = (snakeSpeed + 0.2)
+  snakeSpeed = (snakeSpeed + 0.3)
   // if (snakeBody.length > 1) {
   // let lastNewSegment = snakeBody[(snakeBody.length - 1)]
   // lastNewSegment.style.backgroundColor = "Blue"
